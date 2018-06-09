@@ -1,0 +1,21 @@
+{
+    "name": "camuthig/faktory-worker",
+    "description": "A PHP implementation of the client and worker patterns for Faktory",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Chris Muthig",
+            "email": "camuthig@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-sockets": "*"
+    },
+    "autoload": {
+      "psr-4": {
+          "Camuthig\\Faktory\\": "src"
+      }
+    }
+}
