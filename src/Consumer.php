@@ -61,15 +61,15 @@ class Consumer implements ConsumerInterface
      * @param WorkUnit $workUnit  The WorkUnit that failed to execute properly.
      * @param string   $errorType The class of error that occurred during execution.
      * @param string   $message   A short description of the error.
-     * @param string[] $backtrace A longer, multi-line backtrace of how the error occurred.
+     * @param string   $backtrace A longer, multi-line backtrace of how the error occurred.
      */
-    public function fail(WorkUnit $workUnit, string $errorType, string $message, array $backtrace): void
+    public function fail(WorkUnit $workUnit, string $errorType, string $message, string $backtrace): void
     {
         $this->connection->writeCommand('FAIL', json_encode([
             'jid' => $workUnit->getJobId(),
             'errType' => $errorType,
             'message' => $message,
-            'backtrace' => $backtrace,
+            'backtrace' => explode("\n", $backtrace),
         ]));
     }
 
