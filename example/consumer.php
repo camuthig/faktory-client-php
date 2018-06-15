@@ -4,7 +4,7 @@ declare(ticks=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$connection = new \Camuthig\Faktory\Connection('127.0.0.1', 7419, [
+$connection = new \Camuthig\Faktory\Client('127.0.0.1', 7419, [
     'wid' => uniqid(),
     'labels' => ['php'],
 ]);

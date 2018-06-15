@@ -6,7 +6,7 @@ namespace Camuthig\Faktory;
 
 use Camuthig\Faktory\Exception\FaktoryException;
 
-class Connection
+class Client
 {
     /**
      * @var string

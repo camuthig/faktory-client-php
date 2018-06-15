@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$connection = new \Camuthig\Faktory\Connection('tcp://127.0.0.1', 7419);
+$connection = new \Camuthig\Faktory\Client('tcp://127.0.0.1', 7419);
 
 $producer = new \Camuthig\Faktory\Producer($connection);
 

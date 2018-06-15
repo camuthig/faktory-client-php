@@ -9,11 +9,11 @@ use Camuthig\Faktory\Exception\FaktoryException;
 class Consumer implements ConsumerInterface
 {
     /**
-     * @var Connection
+     * @var Client
      */
     private $connection;
 
-    public function __construct(Connection $connection)
+    public function __construct(Client $connection)
     {
         if (empty($connection->getWorkerOptions())) {
             throw new FaktoryException('Consumer connections must include worker options');

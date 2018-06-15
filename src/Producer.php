@@ -8,11 +8,11 @@ class Producer implements ProducerInterface
 {
 
     /**
-     * @var Connection
+     * @var Client
      */
     private $connection;
 
-    public function __construct(Connection $connection)
+    public function __construct(Client $connection)
     {
         $this->connection = $connection;
     }
